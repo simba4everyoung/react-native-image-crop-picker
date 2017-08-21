@@ -86,6 +86,11 @@ class PickerModule extends ReactContextBaseJavaModule implements ActivityEventLi
     private int width = 200;
     private int height = 200;
 
+    //Aspect Ratios
+    private int aspectWidth = 4;
+    private int aspectHeight = 3;
+
+    
     private Uri mCameraCaptureURI;
     private String mCurrentPhotoPath;
     private ResultCollector resultCollector;
@@ -122,6 +127,8 @@ class PickerModule extends ReactContextBaseJavaModule implements ActivityEventLi
         showCropGuidelines = options.hasKey("showCropGuidelines") ? options.getBoolean("showCropGuidelines") : showCropGuidelines;
         hideBottomControls = options.hasKey("hideBottomControls") ? options.getBoolean("hideBottomControls") : hideBottomControls;
         enableRotationGesture = options.hasKey("enableRotationGesture") ? options.getBoolean("enableRotationGesture") : enableRotationGesture;
+        aspectWidth = options.hasKey("aspectWidth") ? options.getInt("aspectWidth") : aspectWidth;
+        aspectHeight = options.hasKey("aspectHeight") ? options.getInt("aspectHeight") : aspectHeight;
         this.options = options;
     }
 
@@ -579,7 +586,7 @@ class PickerModule extends ReactContextBaseJavaModule implements ActivityEventLi
 
         UCrop.of(uri, Uri.fromFile(new File(this.getTmpDir(activity), UUID.randomUUID().toString() + ".jpg")))
                 .withMaxResultSize(width, height)
-                .withAspectRatio(4, 3)
+                .withAspectRatio(aspectWidth, aspectHeight)
                 .withOptions(options)
                 .start(activity);
     }
