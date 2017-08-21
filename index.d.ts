@@ -23,7 +23,7 @@ declare module "react-native-image-crop-picker" {
         hideBottomControls?: boolean;
         enableRotationGesture?: boolean;
         aspectWidth?: number;
-        aspectHeight?: height;
+        aspectHeight?: number;
     }
 
     export interface Image {
