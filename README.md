@@ -76,6 +76,8 @@ ImagePicker.clean().then(() => {
 | cropping                                |           bool (default false)           | Enable or disable cropping               |
 | width                                   |                  number                  | Width of result image when used with `cropping` option |
 | height                                  |                  number                  | Height of result image when used with `cropping` option |
+| aspectWidth                             |                  number                  | Width for the aspect ratio created for the image |
+| aspectHeight                            |                  number                  | Height for the aspect ratio created for the image |
 | multiple                                |           bool (default false)           | Enable or disable multiple image selection |
 | includeBase64                           |           bool (default false)           | Enable or disable returning base64 data with image |
 | cropperActiveWidgetColor (android only) |       string (default `"#424242"`)       | When cropping image, determines ActiveWidget color. |
