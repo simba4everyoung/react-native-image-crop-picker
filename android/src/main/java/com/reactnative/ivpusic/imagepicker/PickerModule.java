@@ -64,7 +64,7 @@ class PickerModule extends ReactContextBaseJavaModule implements ActivityEventLi
     private static final String E_PERMISSIONS_MISSING = "E_PERMISSIONS_MISSING";
     private static final String E_ERROR_WHILE_CLEANING_FILES = "E_ERROR_WHILE_CLEANING_FILES";
 
-    private String mediaType = "any";
+    private String mediaType = "photo";
     private boolean multiple = false;
     private boolean includeBase64 = false;
     private boolean cropping = false;
